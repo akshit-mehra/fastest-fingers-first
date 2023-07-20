@@ -1,11 +1,13 @@
 import React from 'react'
 import About from '../About/About'
-import Trendingsection from '../Trending/Trendingsection'
+
+import Select from '../Select/Select'
 
 function Home() {
   return (
     <>
       <About/>
+      <Select/>
       {/* <Trendingsection/> */}
       {/* <Hpost/> */}
     </>
