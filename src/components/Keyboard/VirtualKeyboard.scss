@@ -130,6 +130,14 @@ body {
 	.uppercase kbd {
 		text-transform: uppercase;
 	}
+	
+		//Styles applied to a currently-pressed key
+		.pressed {
+			background: $yellow;
+			position: relative;
+			top: 2px;
+			box-shadow: none;
+		}
 }
 
 

@@ -137,9 +137,7 @@ const VirtualKeyboard = () => {
 		</div>
       </div>
       <br />
-      <pre style={{ width: '100%', textAlign: 'center' }}>
-        Click the screen or type Shift + Delete to clear all text.
-      </pre>
+    
     </div>
   );
 };
