@@ -1,0 +1,46 @@
+.Nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-right: 80px;
+
+}
+.navitem{
+    margin: 0px 1px;
+    
+}
+.left img{
+    
+    height:67px;
+    box-sizing: border-box;
+    margin-left: 45px;
+}
+.login{
+    width: 123px;
+    height: 36px;
+    text-align: center;
+    background: rgb(238,184,63);
+    padding-top: 6px;
+    border-radius: 15px;
+
+}
+.chat{
+    width: 123px;
+    height: 36px;
+    text-align: center;
+    background: rgb(238,184,63);
+    padding-top: 6px;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
