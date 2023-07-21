@@ -6,6 +6,7 @@ import CardState from "./context/cards/CardState";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login/Login";
 import TextBox from './components/textBox/TextBox';
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="solo" element={<TextBox/>} />
         </Routes>
         </Router>
+          <Footer/>
       </CardState>
 
     </div>

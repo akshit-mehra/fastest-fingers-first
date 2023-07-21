@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import "./TextBox.css";
-const getText = () =>
-  `hello my name is great king britain and i am the king of the world and a dictator you need to listen to me and do as i say`.split(' ')
+// const getText = () =>
+  // `hello my name is great king britain and i am the king of the world and a dictator you need to listen to me and do as i say`.split(' ')
 //   .sort(()=>
 //     Math.random() > 0.5 ? 1 : -1)
 
 const Word = (props) => {
   let { active, text, correct } = props;
 
+  
+
   if (active) {
     return <span className="active" style={{ fontWeight: 'bold' }}>{text} </span>
-
   }
   if (correct === true) {
     return <span className="correct">{text} </span>
@@ -24,8 +25,30 @@ const Word = (props) => {
 }
 // Word = React.memo(Word);
 const TextBox = () => {
+
+  const difficulty = "medium"
+
+  const host = "http://localhost:3001";
+  const getText = async (difficulty) => {
+    // API call
+    console.log("calling api");
+
+    const response = await fetch(`${host}/api/text/get`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({difficulty}),
+    });
+
+    const json = await response.json();
+     console.log(json)
+
+    return json.text;
+  };
+
   const [userInput, setUserInput] = useState("");
-  const text = useRef(getText());
+  const text = useRef(getText(difficulty));
   const [activeWordIndex, setActiveWordIndex] = useState(0);
   const [correctWordArray, setCorrectWordArray] = useState([]);
 
@@ -47,7 +70,7 @@ const TextBox = () => {
   }
   return (
     <div>
-      <p>{text.current.map((word, index) => {
+      {text && <p>{text.current.map((word, index) => {
         // if(idx==activeWordIndex){
         //     return <b>{word} </b>
         // }
@@ -55,7 +78,7 @@ const TextBox = () => {
         return <Word text={word} active={index === activeWordIndex} key={index}
           correct= {correctWordArray[index]}
         />
-      })}</p>
+      })}</p>}
       <input
         type="text"
         value={userInput}

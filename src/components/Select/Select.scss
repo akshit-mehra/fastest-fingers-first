@@ -27,7 +27,7 @@ body {
 }
 
 .page-content {
-  display: grid;
+  // display: grid;
   grid-gap: 1rem;
   padding: 1rem;
   // max-width: 1024px;
@@ -63,7 +63,7 @@ body {
   // align-items: flex-end;
   overflow: hidden;
   padding: 1rem;
-  width: 100%;
+  width: 50%;
   text-align: center;
   color: rgb(64, 64, 64);
   background-color: whitesmoke;
@@ -98,7 +98,7 @@ body {
     left: 0;
     width: 100%;
     height: 200%;
-    background-position: center; /* Center the background image */
+    background-position: center; 
     pointer-events: none;
     background-image: linear-gradient(
       to bottom,
@@ -138,18 +138,18 @@ body {
 }
 
 .content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   width: 100%;
   padding: 1rem;
   transition: transform var(--d) var(--e);
   z-index: 1;
   
-  > * + * {
-    margin-top: 1rem;
-  }
+  // > * + * {
+  //   margin-top: 1rem;
+  // }
 }
 
 .title {
@@ -178,6 +178,7 @@ body {
   background-color: black;
   border: none;
   
+  
   &:hover {
     background-color: lighten(black, 5%);
   }
@@ -188,16 +189,32 @@ body {
   }
 }
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: auto;
+  align-self: center;
+
+}
+
+.first-card{
+  margin-left: auto;
+}
+
 .easy{
   background-color: green;
+  margin: 10px;
 }
 
 .med{
   background-color: orange;
+  margin: 10px;
 }
 
 .hard{
   background-color: red;
+  margin: 10px;
 }
 
 @media (hover: hover) and (min-width: $bp-md) {

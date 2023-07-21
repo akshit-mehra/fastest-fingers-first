@@ -1,62 +1,42 @@
-.Footer{
-    display: flex;
-    justify-content: space-around;
-    background-color: #ECFFF6;
-    ;
-    height: 160px;
-    align-items: center;
-    position: relative;
+.footerdiv {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* position: fixed;     */
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    background-color: rgb(248,181, 0);
+    height: 3rem;
+    width: 100%;
+    /* padding: 1rem; */
+    z-index: -1;
+    color: black;
 }
 
-.btnText{
-    padding-bottom: 4px;
+.github {
+    height: 1.5rem;
 }
-#bold{
-    display: inline;
-    font-weight: 600;
-}
-#input-footer{
-    width: 250px;
-    height: 29px;
-    border-top-left-radius: 11px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: #BADCB7;
-    border: 0;
-    position: absolute;
-   
-}
-::placeholder{
-    color: #25652B;
-    
-}
-#footer-button{
-    background: #25652B;
-    height: 29px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    color: #BADCB7;
-    width: 100px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 0;
-    position: relative;
-    margin-left: 223px;
 
+.twt {
+    height: 1.5rem;
 }
-.buttonFooter{
-    margin-left: 187px;
-}
-.links{
+
+.innerfooter {
     display: flex;
-    margin-right: 190px;
-    align-items: center;
-    padding-top: 35px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    height: 100%; 
 }
-.link1{
-    margin-right: 40px;
+
+.inner {
+    display: flex;
+    margin: 0 0.8rem;
 }
-.link-items{
-    margin-bottom: 10px;
+
+img {
+    padding: 0 0.8rem;
+}
+#madeby{
+    padding-top: 0.1rem;
 }

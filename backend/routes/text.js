@@ -4,7 +4,6 @@ const router = express.Router();
 const Texts = require("../models/Texts");
 const { body, validationResult } = require("express-validator");
 
-// ROUTE-1 :: get all recipes - GET - "/api/blog/getposts" - DOES NOT REQUIRE LOGIN
 router.get("/get", async (req, res) => {
     const diff = req.body.difficulty;
     const min = 1;
@@ -30,12 +29,8 @@ router.get("/get", async (req, res) => {
 });
 
 
-router.post('/add', 
-fetchuser, // middleware to get user info from jwt
-[
-   
-], async (req, res) => {
-    
+router.post('/add', async (req, res) => {
+
     const newText = new Texts({
         number: req.body.number,
         text: req.body.text,
