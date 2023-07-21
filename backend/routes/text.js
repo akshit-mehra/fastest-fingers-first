@@ -4,7 +4,7 @@ const router = express.Router();
 const Texts = require("../models/Texts");
 const { body, validationResult } = require("express-validator");
 
-router.get("/get", async (req, res) => {
+router.post("/get", async (req, res) => {
     const diff = req.body.difficulty;
     const min = 1;
     let max = 10;

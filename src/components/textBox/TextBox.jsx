@@ -34,7 +34,7 @@ const TextBox = () => {
     console.log("calling api");
 
     const response = await fetch(`${host}/api/text/get`, {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
